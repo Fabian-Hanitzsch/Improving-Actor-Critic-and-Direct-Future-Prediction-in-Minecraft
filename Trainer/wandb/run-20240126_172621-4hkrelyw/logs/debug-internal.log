@@ -1,0 +1,55 @@
+2024-01-26 17:26:21,687 INFO    StreamThr :21476 [internal.py:wandb_internal():87] W&B internal server running at pid: 21476, started at: 2024-01-26 17:26:21.686630
+2024-01-26 17:26:21,688 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status
+2024-01-26 17:26:21,692 INFO    WriterThread:21476 [datastore.py:open_for_write():85] open: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\run-4hkrelyw.wandb
+2024-01-26 17:26:21,692 DEBUG   SenderThread:21476 [sender.py:send():336] send: header
+2024-01-26 17:26:21,730 DEBUG   SenderThread:21476 [sender.py:send():336] send: run
+2024-01-26 17:26:22,259 INFO    SenderThread:21476 [dir_watcher.py:__init__():219] watching files in: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files
+2024-01-26 17:26:22,260 INFO    SenderThread:21476 [sender.py:_start_run_threads():1078] run started: 4hkrelyw with start time 1706286381.68863
+2024-01-26 17:26:22,260 DEBUG   SenderThread:21476 [sender.py:send_request():363] send_request: summary_record
+2024-01-26 17:26:22,261 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: check_version
+2024-01-26 17:26:22,262 INFO    SenderThread:21476 [sender.py:_save_file():1332] saving file wandb-summary.json with policy end
+2024-01-26 17:26:22,262 DEBUG   SenderThread:21476 [sender.py:send_request():363] send_request: check_version
+2024-01-26 17:26:22,366 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: run_start
+2024-01-26 17:26:22,379 DEBUG   HandlerThread:21476 [system_info.py:__init__():31] System info init
+2024-01-26 17:26:22,379 DEBUG   HandlerThread:21476 [system_info.py:__init__():46] System info init done
+2024-01-26 17:26:22,379 INFO    HandlerThread:21476 [system_monitor.py:start():183] Starting system monitor
+2024-01-26 17:26:22,380 INFO    SystemMonitor:21476 [system_monitor.py:_start():147] Starting system asset monitoring threads
+2024-01-26 17:26:22,380 INFO    HandlerThread:21476 [system_monitor.py:probe():204] Collecting system info
+2024-01-26 17:26:22,385 INFO    SystemMonitor:21476 [interfaces.py:start():187] Started cpu monitoring
+2024-01-26 17:26:22,389 DEBUG   HandlerThread:21476 [system_info.py:probe():195] Probing system
+2024-01-26 17:26:22,390 INFO    SystemMonitor:21476 [interfaces.py:start():187] Started disk monitoring
+2024-01-26 17:26:22,397 INFO    SystemMonitor:21476 [interfaces.py:start():187] Started memory monitoring
+2024-01-26 17:26:22,405 INFO    SystemMonitor:21476 [interfaces.py:start():187] Started network monitoring
+2024-01-26 17:26:22,406 DEBUG   HandlerThread:21476 [system_info.py:_probe_git():180] Probing git
+2024-01-26 17:26:22,477 DEBUG   HandlerThread:21476 [system_info.py:_probe_git():188] Probing git done
+2024-01-26 17:26:22,477 DEBUG   HandlerThread:21476 [system_info.py:probe():240] Probing system done
+2024-01-26 17:26:22,477 DEBUG   HandlerThread:21476 [system_monitor.py:probe():213] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.8.8', 'heartbeatAt': '2024-01-26T16:26:22.390671', 'startedAt': '2024-01-26T16:26:21.675630', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'C:\\Users\\GamerBaum\\Desktop\\minecraft-rl-basics\\Trainer\\main.py', 'codePath': 'Trainer\\main.py', 'git': {'remote': 'https://gitlab.hs-anhalt.de/ki/projekte/minecraft-rl/minecraft-rl-basics.git', 'commit': 'fbdf2ddc3646c70f377190eea547a3933de86fe3'}, 'email': 'fabian.hanitzsch@student.hs-anhalt.de', 'root': 'C:/Users/GamerBaum/Desktop/minecraft-rl-basics', 'host': 'DESKTOP-BREG3P7', 'username': 'GamerBaum', 'executable': 'C:\\Users\\GamerBaum\\Desktop\\minecraft-rl-basics\\venv5\\Scripts\\python.exe', 'cpu_count': 6, 'cpu_count_logical': 12, 'cpu_freq': {'current': 3600.0, 'min': 0.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 3600.0, 'min': 0.0, 'max': 3600.0}], 'disk': {'total': 465.25576400756836, 'used': 427.92300033569336}, 'memory': {'total': 15.928340911865234}}
+2024-01-26 17:26:22,477 INFO    HandlerThread:21476 [system_monitor.py:probe():214] Finished collecting system info
+2024-01-26 17:26:22,477 INFO    HandlerThread:21476 [system_monitor.py:probe():217] Publishing system info
+2024-01-26 17:26:22,477 DEBUG   HandlerThread:21476 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2024-01-26 17:26:22,478 DEBUG   HandlerThread:21476 [system_info.py:_save_pip():67] Saving pip packages done
+2024-01-26 17:26:22,479 INFO    HandlerThread:21476 [system_monitor.py:probe():219] Finished publishing system info
+2024-01-26 17:26:22,484 DEBUG   SenderThread:21476 [sender.py:send():336] send: files
+2024-01-26 17:26:22,484 INFO    SenderThread:21476 [sender.py:_save_file():1332] saving file wandb-metadata.json with policy now
+2024-01-26 17:26:22,489 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-26 17:26:22,490 DEBUG   SenderThread:21476 [sender.py:send_request():363] send_request: stop_status
+2024-01-26 17:26:22,767 DEBUG   SenderThread:21476 [sender.py:send():336] send: telemetry
+2024-01-26 17:26:23,104 INFO    wandb-upload_0:21476 [upload_job.py:push():138] Uploaded file C:\Users\GAMERB~1\AppData\Local\Temp\tmp4gvhdtmbwandb\2sskfs08-wandb-metadata.json
+2024-01-26 17:26:23,272 INFO    Thread-17 :21476 [dir_watcher.py:_on_file_created():278] file/dir created: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files\output.log
+2024-01-26 17:26:23,273 INFO    Thread-17 :21476 [dir_watcher.py:_on_file_created():278] file/dir created: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files\requirements.txt
+2024-01-26 17:26:23,273 INFO    Thread-17 :21476 [dir_watcher.py:_on_file_created():278] file/dir created: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files\wandb-summary.json
+2024-01-26 17:26:23,273 INFO    Thread-17 :21476 [dir_watcher.py:_on_file_created():278] file/dir created: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files\wandb-metadata.json
+2024-01-26 17:26:25,291 INFO    Thread-17 :21476 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files\output.log
+2024-01-26 17:26:26,809 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:26:31,856 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:26:36,906 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:26:37,503 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-26 17:26:37,504 DEBUG   SenderThread:21476 [sender.py:send_request():363] send_request: stop_status
+2024-01-26 17:26:42,848 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:26:47,883 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:26:52,516 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: stop_status
+2024-01-26 17:26:52,517 DEBUG   SenderThread:21476 [sender.py:send_request():363] send_request: stop_status
+2024-01-26 17:26:53,768 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:26:54,585 INFO    Thread-17 :21476 [dir_watcher.py:_on_file_modified():295] file/dir modified: C:\Users\GamerBaum\Desktop\minecraft-rl-basics\Trainer\wandb\run-20240126_172621-4hkrelyw\files\config.yaml
+2024-01-26 17:26:59,038 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report
+2024-01-26 17:27:04,083 DEBUG   HandlerThread:21476 [handler.py:handle_request():144] handle_request: status_report

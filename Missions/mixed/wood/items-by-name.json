@@ -1,0 +1,9 @@
+{
+    "other": 0,
+    "air": 1,
+    "oak_log": 2,
+    "birch_log": 3,
+    "dirt": 4,
+    "grass_block": 5
+
+}

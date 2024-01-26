@@ -1,0 +1,14 @@
+{
+  "timestep_delay": 0.2,
+  "batch_size": 256,
+  "run_time_seconds": 600,
+  "state_save_directory": "/app/mc-data/states",
+  "simplified_environment": true,
+  "staggered_model_update_count": 1,
+
+  "port_for_models": 5000,
+  "buffer_states_between_models": 10,
+  "seconds_between_model_updates": 30,
+  "max_episode_count": 10
+
+}

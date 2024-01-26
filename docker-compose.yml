@@ -1,0 +1,32 @@
+version: "3.5"
+
+services:
+  server:
+    container_name: server
+    build:
+      context: .
+      dockerfile: ./Dockerfile_minecraft_server
+
+  environment-api:
+    container_name: environment-api
+    build:
+      context: .
+      dockerfile: ./Dockerfile_environment_api
+
+  nodejs-mineflayer:
+    container_name: nodejs-mineflayer
+    build:
+      context: .
+      dockerfile: ./Dockerfile_nodejs_mineflayer
+
+    expose:
+      - "48080"
+
+  trainer:
+    container_name: trainer
+    build:
+      context: .
+      dockerfile: ./Dockerfile_trainer
+    expose:
+      - "9001"
+      - "5000-5100"

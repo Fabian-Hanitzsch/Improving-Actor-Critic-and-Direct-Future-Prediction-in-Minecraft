@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mc
+  namespace: mineflayer-stack
+
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                  - malea-srv01
+
+  volumes:
+    #- name: mc-mineflayer
+      #persistentVolumeClaim:
+        #claimName: pvc-minecraft2
+    - name: socket-volume
+      emptyDir: { }
+  containers:
+    - image: stfahani/minecraft-rl:server
+      env:
+        - name: SEED
+          value: "0"
+
+      resources:
+        requests:
+          cpu: "2"
+          memory: "4G"
+
+      name: server
+      ports:
+        - containerPort: 25565
+
+    - image: stfahani/minecraft-rl:environment-api
+      name: environment-api
+      imagePullPolicy: Always
+      resources:
+        requests:
+          cpu: "2"
+          memory: "8G"
+          nvidia.com/gpu: "1"
+        limits:
+          nvidia.com/gpu: "1"
+
+      volumeMounts:
+        #- mountPath: "/app/mc-data"
+         # name: mc-mineflayer
+        - mountPath: /share/
+          name: socket-volume
+
+    - image: stfahani/minecraft-rl:nodejs-mineflayer
+      name: nodejs-mineflayer
+      resources:
+        requests:
+          cpu: "3"
+          memory: "16G"
+
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 48080
+      volumeMounts:
+        - mountPath: /share/
+          name: socket-volume
+
+
+  restartPolicy: OnFailure

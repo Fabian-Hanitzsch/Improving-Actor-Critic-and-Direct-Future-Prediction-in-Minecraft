@@ -1,0 +1,24 @@
+FROM itzg/minecraft-server
+
+
+ENV DIFFICULTY="peaceful"
+ENV EULA="TRUE"
+ENV MEMORY="2G"
+ENV MAX_PLAYERS="4"
+ENV ONLINE_MODE="false"
+ENV SERVER_PORT="25565"
+ENV SPAWN_PROTECTION="0"
+ENV VERSION="1.19.2"
+ENV WHITE_LIST="false"
+ENV ALLOW_FLIGHT="true"
+ENV SPAWN_ANIMALS="false"
+ENV SIMULATION_DISTANCE="8"
+ENV VIEW_DISTANCE="8"
+ENV ALLOW_CHEATS="true"
+ENV SPAWN_NPCS="false"
+ENV OPS_FILE="ops.json"
+ENV WHITELIST_FILE="whitelist.json"
+
+COPY ./offline-uuid.json ./whitelist.json
+COPY ./offline-uuid.json ./ops.json
+

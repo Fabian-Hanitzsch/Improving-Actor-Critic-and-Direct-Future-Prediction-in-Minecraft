@@ -1,0 +1,13 @@
+{
+  "ip_addr": "trainer-service",
+  "models_path_kubernetes": "/app/mc-data/Trained_Models",
+  "port": 9001,
+  "models_path_local": "Trained_Models",
+  "model_name": "A3CLimited",
+  "max_simultaneous_pods": 11,
+  "max_pods": 6000,
+  "max_saved_model_steps": 50,
+  "Debug": false,
+  "max_grad_norm": 100,
+  "gradients_needed_for_step": 10
+}

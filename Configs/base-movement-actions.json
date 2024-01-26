@@ -1,0 +1,249 @@
+{
+    "0": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": true,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            0
+        ]
+    },
+    "1": {
+        "forward": true,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            0
+        ]
+    },
+    "2": {
+        "forward": false,
+        "left": true,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            0
+        ]
+    },
+    "3": {
+        "forward": false,
+        "left": false,
+        "right": true,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            0
+        ]
+    },
+    "4": {
+        "forward": true,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": true,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            0
+        ]
+    },
+    "5": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            5,
+            0
+        ]
+    },
+    "6": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            25,
+            0
+        ]
+    },
+    "7": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            -5,
+            0
+        ]
+    },
+    "8": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            -25,
+            0
+        ]
+    },
+    "9": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            5
+        ]
+    },
+    "10": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            25
+        ]
+    },
+    "11": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            -5
+        ]
+    },
+    "12": {
+        "forward": false,
+        "left": false,
+        "right": false,
+        "sneak": false,
+        "sprint": false,
+        "back": false,
+        "jump": false,
+        "attack": false,
+        "use": false,
+        "insert": "none",
+        "take": "none",
+        "craft": "none",
+        "equip": "none",
+        "camera": [
+            0,
+            -25
+        ]
+    }
+}

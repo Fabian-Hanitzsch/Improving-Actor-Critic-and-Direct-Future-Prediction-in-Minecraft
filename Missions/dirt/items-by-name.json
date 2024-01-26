@@ -1,0 +1,6 @@
+{
+    "none": 0,
+    "air": 1,
+    "dirt": 2,
+    "grass_block": 3
+}

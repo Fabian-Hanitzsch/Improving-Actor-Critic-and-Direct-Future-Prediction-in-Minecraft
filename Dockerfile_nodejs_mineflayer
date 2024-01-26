@@ -1,0 +1,61 @@
+FROM node:18.17-bullseye-slim
+ENV NODE_ENV=production
+
+RUN apt-get update && \
+   apt-get install -y software-properties-common && \
+   rm -rf /var/lib/apt/lists/* \
+
+RUN add-apt-repository ppa:webupd8team/java
+# install build dependencies and needed tools
+
+
+# Fix certificate issues
+RUN apt-get update && \
+   apt-get -y install ca-certificates-java && \
+   apt-get clean && \
+   update-ca-certificates -f;
+
+# Setup JAVA_HOME -- useful for docker commandline
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+RUN export JAVA_HOME
+
+RUN apt-get update &&  apt-get -y install xvfb gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 \
+     libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 \
+     libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 \
+     libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 \
+     libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget libxi-dev mesa-common-dev libglu1-mesa-dev freeglut3-dev && \
+   rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /Configs
+    # Create app directory
+WORKDIR /app
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY ./nodejs-mineflayer/package.json ./package.json
+COPY ./nodejs-mineflayer/package-lock.json ./package-lock.json
+COPY ./nodejs-mineflayer/mineflayer-extension ./mineflayer-extension
+COPY ./nodejs-mineflayer/prismarine-viewer-extension ./prismarine-viewer-extension
+
+
+RUN rm -rf node_modules/
+
+#RUN npm install canvas
+RUN npm ci install --only=production
+
+WORKDIR /Configs
+COPY ./Configs/environment-mineflayer-connection.json ./environment-mineflayer-connection.json
+COPY ./Configs/image-stream.json ./image-stream.json
+COPY ./Configs/minecraft-server-connection.json ./minecraft-server-connection.json
+
+WORKDIR /app
+COPY ./nodejs-mineflayer/index.js ./index.js
+COPY ./nodejs-mineflayer/bot_viewer.js ./bot_viewer.js
+
+EXPOSE 48080
+
+
+COPY ./nodejs-mineflayer/run.sh /run.sh
+RUN chmod a+x /run.sh
+
+CMD /run.sh

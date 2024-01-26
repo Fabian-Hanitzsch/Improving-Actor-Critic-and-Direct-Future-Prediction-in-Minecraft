@@ -1,0 +1,29 @@
+{
+  "dirt_mission_path": "../Missions/mixed/dirt",
+  "wood_mission_path": "../Missions/mixed/wood",
+  "image_width": 84,
+  "image_height": 84,
+  "sequence_length": 4,
+  "image_channels": 3,
+  "binary_action_dim": 9,
+  "gamma": 0.9655,
+  "reward_multiplicator": 2.255,
+
+  "repeat_amount": 4,
+  "start_repeat_probability": 0,
+  "end_repeat_probability": 0,
+
+  "repeat_batches": 10000,
+  "minecraft_data_version": "1.19",
+  "learning_rate": 1e-3,
+  "end_learning_rate_factor": 1.0,
+
+  "model_specific_parameters": {
+    "timesteps": [1, 2, 4, 8, 16, 32],
+    "timesteps_importance": [0, 0, 0, 0.5, 0.5, 1],
+    "start_epsilon": 1.0,
+    "min_epsilon": 0.2,
+    "exploration_batches": 500
+  }
+
+}

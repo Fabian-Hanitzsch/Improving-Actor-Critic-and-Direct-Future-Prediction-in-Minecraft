@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: 1e3-dirt-mission-a3c-1-alpha09044-beta09466-old-init-trainer
+  namespace: mineflayer-stack
+  labels:
+    app.kubernetes.io/name: training
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                  - malea-srv01
+  automountServiceAccountToken: True
+  serviceAccountName: trainer-account
+  volumes:
+    - name: mc-mineflayer
+      persistentVolumeClaim:
+        claimName: pvc-minecraft2
+  containers:
+    - image: stfahani/minecraft-rl:trainer
+      name: trainer
+      imagePullPolicy: Always
+      resources:
+        requests:
+          cpu: "4"
+          nvidia.com/gpu: "1"
+          memory: "64G"
+        limits:
+          nvidia.com/gpu: "1"
+
+      ports:
+        - containerPort: 9001
+          name: http-trainer
+
+      volumeMounts:
+        - mountPath: "/app/mc-data"
+          name: mc-mineflayer
+      env:
+        - name: WANDB_LOGIN_KEY
+          valueFrom:
+            secretKeyRef:
+              name: wandb-creds-stfahani
+              key: WANDB_KEY
+        - name: model_update_method
+          value: "mean"
+        - name: run_name
+          value: "1e3-dirt-mission-a3c-1-alpha09044-beta09466-old-init-"
+        - name: max_grad_norm
+          value: "10000000"
+        - name: clipped_reward
+          value: "False"
+        - name: wait_for_new_model
+          value: "True"
+        - name: model_type
+          value: "A3C"
+        - name: learning_rate
+          value: "0.001"
+        - name: rsm_alpha
+          value: "0.9044"
+        - name: rsm_beta
+          value: "0.9466"
+        - name: load_from_checkpoint
+          value: "False"
+        - name: checkpoint_path
+          value: ""
+
+
+  restartPolicy: Never

@@ -1,0 +1,10 @@
+{
+  "image_width": 84,
+  "image_height": 84,
+  "ip_addr": "127.0.0.1",
+  "port": 8100,
+  "IPC": false,
+  "milliseconds_between_frames": 16,
+  "view_distance": 6,
+  "initial_delay_seconds": 15
+}

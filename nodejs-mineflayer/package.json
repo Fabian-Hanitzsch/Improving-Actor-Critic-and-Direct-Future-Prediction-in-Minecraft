@@ -1,0 +1,28 @@
+{
+  "name": "mineflayer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --stack-trace-limit=1000 index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "bufferutil": "^4.0.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "minecraft-data": "^3.31.0",
+    "mineflayer": "file:mineflayer-extension",
+    "mineflayer-armor-manager": "^1.4.2",
+    "mineflayer-radar": "0.0.2",
+    "node-canvas-webgl": "^0.2.7",
+    "node-fetch": "2.6.6",
+    "prismarine-viewer-extension": "file:prismarine-viewer-extension",
+    "utf-8-validate": "^5.0.10",
+    "uuid": "9.0.0"
+  }
+}

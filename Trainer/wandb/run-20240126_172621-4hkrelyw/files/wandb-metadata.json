@@ -1,0 +1,42 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.8",
+    "heartbeatAt": "2024-01-26T16:26:22.390671",
+    "startedAt": "2024-01-26T16:26:21.675630",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "C:\\Users\\GamerBaum\\Desktop\\minecraft-rl-basics\\Trainer\\main.py",
+    "codePath": "Trainer\\main.py",
+    "git": {
+        "remote": "https://gitlab.hs-anhalt.de/ki/projekte/minecraft-rl/minecraft-rl-basics.git",
+        "commit": "fbdf2ddc3646c70f377190eea547a3933de86fe3"
+    },
+    "email": "fabian.hanitzsch@student.hs-anhalt.de",
+    "root": "C:/Users/GamerBaum/Desktop/minecraft-rl-basics",
+    "host": "DESKTOP-BREG3P7",
+    "username": "GamerBaum",
+    "executable": "C:\\Users\\GamerBaum\\Desktop\\minecraft-rl-basics\\venv5\\Scripts\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 3600.0,
+        "min": 0.0,
+        "max": 3600.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3600.0,
+            "min": 0.0,
+            "max": 3600.0
+        }
+    ],
+    "disk": {
+        "total": 465.25576400756836,
+        "used": 427.92300033569336
+    },
+    "memory": {
+        "total": 15.928340911865234
+    }
+}
